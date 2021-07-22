@@ -85,6 +85,6 @@ public String getPassword(){return password;}
 
 public String showInfo(){
     return "DISPLAY NAME " + firstName + " " + lastName + "\2 " +
-            "COMPANY EMAIL " + email + "\2MAILBOX CAPACITY " + mailboxCapacity +" mb";
+            "COMPANY EMAIL " + email + "\2MAILBOX CAPACITY " + mailboxCapacity +" MB";
 
 }}
