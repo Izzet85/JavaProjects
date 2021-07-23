@@ -51,23 +51,25 @@ public class Student {
 // Enroll in courses
 
     public void enroll(){
-//        do{
-//        System.out.println("Enter course to enroll (0 to quit )");
-//        Scanner in = new Scanner(System.in);
-//        String course = in.nextLine();
-//
-//        if (course != "Q"){
-//            courses  = courses +"\n" + course;
-//            tuitionBalance = tuitionBalance + costOfCourse;
-//
-//        }
-//
-//        else{
-//        break }
-//        while(1 !=0);
-//        System.out.println("ENROLLED IN:  " + courses);
-//        System.out.println("TUITION BALANCE " + tuitionBalance );
-//    }
+        do {
+            System.out.println("Enter course to enroll (0 to quit )");
+            Scanner in = new Scanner(System.in);
+            String course = in.nextLine();
+
+            if (!course.equals("q") ) {
+                courses = courses + "\n" + course;
+                tuitionBalance = tuitionBalance + costOfCourse;
+
+            }
+            else {
+                break;
+            }
+        }  while (1 != 0) ;
+
+
+            System.out.println("ENROLLED IN:  " + courses);
+            System.out.println("TUITION BALANCE " + tuitionBalance);
+
 
 //    Pay tuition
 
@@ -75,4 +77,4 @@ public class Student {
 
 
 
-}
+}}
