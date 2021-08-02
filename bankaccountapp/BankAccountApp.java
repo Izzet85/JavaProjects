@@ -13,6 +13,10 @@ Checking checking1 = new Checking("Izzet","987654321",1234);
 
 Savings saving1 = new Savings("Ates","123456789",1234);
 
+saving1.showInfo();
 
+System.out.println("***************************************************");
+
+checking1.showInfo();
     }
 }

@@ -11,12 +11,25 @@ public class Savings extends Account {
     //    constructor
     public Savings(String name,String socialSecurityNumber,double balance){
         super(name,socialSecurityNumber,balance);
-        System.out.println("New saving account");
+        accountNumber = "1" + accountNumber;
+        setSafetyDepositBox();
     }
 
 
     //    saving account specific methods
+    public void setSafetyDepositBox(){
+        safetyDepositBoxID = (int) (Math.random() * Math.pow(10, 3));
+        safetyBoxKey       = (int) (Math.random() * Math.pow(10, 4));
 
+    }
+
+    public void showInfo(){
+//        super.showInfo();
+        System.out.println("ACOUNT TYPE: Savings account " +
+                " \n safety Deposit Box ID: " + safetyDepositBoxID +
+                "\n Safety Deposit Box KEY: "  + safetyBoxKey);
+
+    }
 
 
 
