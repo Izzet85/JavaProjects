@@ -18,5 +18,10 @@ saving1.showInfo();
 System.out.println("***************************************************");
 
 checking1.showInfo();
+
+saving1.deposit(2500);
+saving1.withdraw(500);
+saving1.transfer("Brokerage",500);
+saving1.compound();
     }
 }

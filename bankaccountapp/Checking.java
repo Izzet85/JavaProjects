@@ -3,8 +3,8 @@ package bankaccountapp;
 public class Checking extends Account{
 
 //    checking account specific properties
-    int debitCardNumber;
-    int debitCardPin;
+    private int debitCardNumber;
+    private int debitCardPin;
 
 //    constructor
     public Checking(String name,String socialSecurityNumber, double balance){
@@ -14,6 +14,12 @@ public class Checking extends Account{
 
     }
 
+    @Override
+    public void setRate() {
+        rate = getBaseRate() *0.15;
+
+
+    }
 
 
 //   checking account specific methods

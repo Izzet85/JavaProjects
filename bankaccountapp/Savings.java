@@ -3,8 +3,8 @@ package bankaccountapp;
 public class Savings extends Account {
 
     //    saving account specific properties
-    int safetyDepositBoxID;
-    int safetyBoxKey;
+    private int safetyDepositBoxID;
+    private int safetyBoxKey;
 
 
 
@@ -13,6 +13,11 @@ public class Savings extends Account {
         super(name,socialSecurityNumber,balance);
         accountNumber = "1" + accountNumber;
         setSafetyDepositBox();
+    }
+
+    @Override
+    public void setRate() {
+       rate =  getBaseRate() -0.25;
     }
 
 
@@ -24,7 +29,7 @@ public class Savings extends Account {
     }
 
     public void showInfo(){
-//        super.showInfo();
+        super.showInfo();
         System.out.println("ACOUNT TYPE: Savings account " +
                 " \n safety Deposit Box ID: " + safetyDepositBoxID +
                 "\n Safety Deposit Box KEY: "  + safetyBoxKey);
